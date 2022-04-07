@@ -5,11 +5,12 @@ require('utils')       -- lua/utils.lua
 require "paq" {
     -- Let Paq manage itself
     "savq/paq-nvim";
-    "nvim-lua/plenary.nvim";                -- Nvim Telescope dependency
-    "neovim/nvim-lspconfig";                -- Language Server Protocol
-    "nvim-treesitter/nvim-treesitter";      -- Nvim Treesitter
-    "nvim-telescope/telescope.nvim";        -- Nvim Telescope
-    "aspeddro/tex.nvim";                    -- tex.nvim
+    "ellisonleao/gruvbox.nvim";
+--    "nvim-lua/plenary.nvim";                -- Nvim Telescope dependency
+--    "neovim/nvim-lspconfig";                -- Language Server Protocol
+--    "nvim-treesitter/nvim-treesitter";      -- Nvim Treesitter
+--    "nvim-telescope/telescope.nvim";        -- Nvim Telescope
+--    "aspeddro/tex.nvim";                    -- tex.nvim
 }
 
 --[[

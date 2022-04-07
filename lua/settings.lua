@@ -28,7 +28,9 @@ wo.colorcolumn = "80"
 -- buffer-local options
 bo.expandtab = true
 
-cmd 'colorscheme nord'          -- Put your favorite colorscheme here
+opt.termguicolors = true                -- True color support
+opt.background = "dark"
+cmd "colorscheme gruvbox"               -- Put your favorite colorscheme here
 -- opt.completeopt = {'menuone', 'noinsert', 'noselect'}  -- Completion options (for deoplete)
 -- opt.expandtab = true                -- Use spaces instead of tabs
 -- opt.hidden = true                   -- Enable background buffers
@@ -43,6 +45,5 @@ opt.smartindent = true                 -- Insert indents automatically
 -- opt.splitbelow = true               -- Put new windows below current
 -- opt.splitright = true               -- Put new windows right of current
 opt.tabstop = 4                        -- Number of spaces tabs count for
--- opt.termguicolors = true            -- True color support
--- opt.wildmode = {'list', 'longest'}  -- Command-line completion mode
+opt.wildmode = {'list', 'longest'}  -- Command-line completion mode
 opt.wrap = false                       -- Disable line wrap
