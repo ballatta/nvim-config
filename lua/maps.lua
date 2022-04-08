@@ -23,12 +23,15 @@ vim.g.mapleader = ' '
 map('n', '<cr>', ':nohlsearch<cr>', options)
 map('n', '<leader>n', ':bnext<cr>', options)
 map('n', '<leader>p', ':bprev<cr>', options)
+
 -- Better window navigation
 map("n", "<C-h>", "<C-w>h", options)
 map("n", "<C-j>", "<C-w>j", options)
 map("n", "<C-k>", "<C-w>k", options)
 map("n", "<C-l>", "<C-w>l", options)
-map('n', '<leader>t', ':sp<CR><leader>j:term<CR>20<C-W>-i', {})
+
+-- New terminal window below current (small)
+map('n', '<leader>t', ':sp<CR><C-w>>j:term<CR>20<C-W>-i', options)
 map("n", "<leader>e", ":Lex 30<cr>", options)
 -- Resize with arrows
 map("n", "<C-Up>", ":resize +2<CR>", options)
@@ -59,3 +62,4 @@ map("t", "<C-h>", "<C-\\><C-N><C-w>h", term_options)
 map("t", "<C-j>", "<C-\\><C-N><C-w>j", term_options)
 map("t", "<C-k>", "<C-\\><C-N><C-w>k", term_options)
 map("t", "<C-l>", "<C-\\><C-N><C-w>l", term_options)
+map("t", "<esc>", "<C-\\><C-N>", term_options)
