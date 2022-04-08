@@ -1,69 +1,54 @@
--- vim.opt behaves like `set` in vimscript
+-- vim.opt behaves like `set` function in vimscript
 local set = vim.opt
+
+-- Table of all our desired vim options
 local options = {
   -- global options
   swapfile = true,
   dir = '/tmp',
   laststatus = 2,
-  hlsearch = false,
   incsearch = true,
   ignorecase = true,
   scrolloff = 12,
   guicursor = "a:block",
   hidden = true,
   signcolumn = "auto",
+
   -- window-local options
   number = true,
   relativenumber = true,
   wrap = false,
   colorcolumn = "80",
+
   -- buffer-local options
   expandtab = true,
-  termguicolors = true,                     -- True color support
+  termguicolors = true,                   -- True color support
   background = "dark",
-  --[[ completeopt = {                  -- Completion options (for deoplete)
-         'menuone',
-         'noinsert',
-         'noselect',
-       },
-  --]]
-  -- expandtab = true,                   -- Use spaces instead of tabs
-  -- hidden = true,                      -- Enable background buffers
-  -- ignorecase = true,                  -- Ignore case
-  -- joinspaces = false,                 -- No double spaces with join
-  -- list = true,                        -- Show some invisible characters
-  scrolloff = 12,                           -- Lines of context
-  shiftround = true,                        -- Round indent
-  shiftwidth = 2,                           -- Size of an indent
-  -- sidescrolloff = 8,                  -- Columns of context
-  smartindent = true,                       -- Insert indents automatically
-  -- splitbelow = true,                  -- Put new windows below current
-  -- splitright = true,                  -- Put new windows right of current
-  tabstop = 2,                              -- Number of spaces tabs count for
-  wildmode = {'list', 'longest'},           -- Command-line completion mode
-  wrap = false,                             -- Disable line wrap
+  scrolloff = 12,                         -- Lines of context
+  shiftround = true,                      -- Round indent
+  shiftwidth = 2,                         -- Size of an indent
+  sidescrolloff = 8,                      -- Columns of context
+  smartindent = true,                     -- Insert indents automatically
+  splitbelow = true,                      -- Put new windows below current
+  splitright = true,                      -- Put new windows right of current
+  tabstop = 2,                            -- Number of spaces tabs count for
+  wildmode = {'list', 'longest'},         -- Command-line completion mode
+  wrap = false,                           -- Disable line wrap
 }
 
+-- Set each option
 for k, v in pairs(options) do
   set[k] = v
 end
 
-
--- Below are some things we could do instead
-
--- Global options
-local o = vim.o
--- Window-local options
-local wo = vim.wo
--- Buffer-local options
-local bo = vim.bo
 -- Vim commands
 local cmd = vim.cmd
-cmd "colorscheme gruvbox"                   -- Put your favorite colorscheme here
+cmd "colorscheme gruvbox"
 
 --[[
 
     Below are all possible options with a short description
+    Also useful to type "help options" in command mode (:)
 
 Short explanation of each option:		*option-list*
 'aleph'		  'al'	    ASCII code of the letter Aleph (Hebrew)
