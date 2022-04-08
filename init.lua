@@ -14,6 +14,8 @@ require "paq" {
 }
 
 --[[
+    Remember, below is vimscript, how to do this in lua?
+
     Lilypond vim lines from website
 
     set runtimepath+=/opt/homebrew/Cellar/lilypond/2.22.2/share/lilypond/2.22.2/vim

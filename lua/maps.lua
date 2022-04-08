@@ -15,6 +15,9 @@ map('n', '<leader>h', '<C-W>h', options)
 map('n', '<leader>j', '<C-W>j', options)
 map('n', '<leader>k', '<C-W>k', options)
 map('n', '<leader>l', '<C-W>l', options)
+map('n', '<leader>t', ':sp<CR><leader>j:term<CR>20<C-W>-i', {})
+-- map('t', '<leader>t', 'ZQ', options)
+
 
 local cmd = vim.cmd
 
