@@ -41,9 +41,12 @@ for k, v in pairs(options) do
   set[k] = v
 end
 
--- Vim commands
-local cmd = vim.cmd
-cmd "colorscheme gruvbox"
+
+
+
+
+
+
 
 --[[
 
@@ -401,4 +404,4 @@ Short explanation of each option:		*option-list*
 'writebackup'	  'wb'	    make a backup before overwriting a file
 'writedelay'	  'wd'	    delay this many msec for each char (for debug)
 
---]]
+]]
