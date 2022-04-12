@@ -1,5 +1,6 @@
--- vim.opt behaves like `set` function in vimscript
+-- vim.opt behaves like 'set' function in vimscript
 local set = vim.opt
+local cmd = vim.cmd
 
 -- Table of all our desired vim options
 local options = {
@@ -19,6 +20,8 @@ local options = {
   relativenumber = true,
   wrap = false,
   colorcolumn = "80",
+
+  autochdir = true,
 
   -- buffer-local options
   expandtab = true,
@@ -41,12 +44,21 @@ for k, v in pairs(options) do
   set[k] = v
 end
 
+vim.cmd(
+[[
+  hi ExtraWhitespace ctermbg=red guibg=red
+  mat ExtraWhitespace /\s\+$/
+  autocmd BufWritePre * :%s/\s\+$//e
+]])
 
-
-
-
-
-
+-- Lilypond filetype plugin, indent mode, and syntax-highlighting
+vim.cmd(
+[[
+  filetype off
+  set runtimepath+=/opt/homebrew/Cellar/lilypond/2.22.2/share/lilypond/2.22.2/vim
+  filetype on
+  syntax on
+]])
 
 --[[
 

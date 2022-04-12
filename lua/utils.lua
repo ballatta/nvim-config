@@ -8,6 +8,6 @@ function M.create_augroup(autocmds, name)
         cmd('autocmd ' .. table.concat(autocmd, ' '))
     end
     cmd('augroup END')
-end
+end           
 
 return M
