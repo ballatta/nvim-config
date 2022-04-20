@@ -5,7 +5,7 @@ local cmd = vim.cmd
 -- Table of all our desired vim options
 local options = {
   -- global options
-  swapfile = true,
+  lazyredraw = true,
   dir = '/tmp',
   laststatus = 2,
   incsearch = true,
@@ -24,6 +24,7 @@ local options = {
   autochdir = true,
 
   -- buffer-local options
+  swapfile = false,
   expandtab = true,
   termguicolors = true,                   -- True color support
   background = "dark",

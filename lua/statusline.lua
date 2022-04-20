@@ -26,16 +26,24 @@ function mode()
   return mode_map[m]
 end
 
+--[[
 function window_number()
   local wn = vim.api.nvim_win_get_number({window})
   return wn
 end
 
+E5108: Error executing lua /Users/brendanallatta/.config/nvim/lua/statusline.lua:30: Expected Lua number
+stack traceback:
+        [C]: in function 'nvim_win_get_number'
+        /Users/brendanallatta/.config/nvim/lua/statusline.lua:30: in function 'window_number'
+        [string "luaeval()"]:1: in main chunk
+]]
+
 function stl()
   return table.concat {
     '%#PrimaryBlock#',
     "%{luaeval('mode()')}",
-    "%{luaeval('window_number()')}",
+    -- "%{luaeval('window_number()')}",
     '%#SecondaryBlock#',
     '%#Blanks# ',
     '%f',
