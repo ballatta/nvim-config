@@ -1,13 +1,14 @@
 local paq = require('paq')
 
-require('autocmds')
+require('settings.autocmds')
 require('fzy.fzy')
-require('maps')
-require('settings')
-require('statusline')
-require('utils')
-require('bondLint')
-require('bondLsp')
+require('settings.maps')
+require('settings.options')
+require('settings.statusline')
+require('settings.utils')
+require('brendanLint')
+require('brendanLSP')
+require('brendanZk')
 -- require('cmp')
 
 paq {
@@ -21,6 +22,13 @@ paq {
   "nvim-orgmode/orgmode";                 -- Org Mode in Nvim
   "folke/which-key.nvim";                 -- Emacs-inspired Which-Key
   "mfussenegger/nvim-lint";                -- Fzy fuzzy finder (fast!)
+  "tpope/vim-surround";
+  "tpope/vim-commentary";
+    "tpope/vim-eunuch";
+    "tpope/vim-repeat";
+  "tpope/vim-rsi";
+  "mickael-menu/zk-nvim";
+  "nvim-orgmode/orgmode";
   -- "hrsh7th/nvim-cmp";                  -- The completion plugin
   -- "hrsh7th/cmp-buffer";                -- buffer completions
   -- "hrsh7th/cmp-path";                  -- path completions

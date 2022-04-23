@@ -2,6 +2,8 @@
 local set = vim.opt
 local cmd = vim.cmd
 
+vim.api.nvim_set_option("clipboard","unnamed")
+
 -- Table of all our desired vim options
 local options = {
   -- global options
@@ -28,7 +30,6 @@ local options = {
   expandtab = true,
   termguicolors = true,                   -- True color support
   background = "dark",
-  scrolloff = 12,                         -- Lines of context
   shiftround = true,                      -- Round indent
   shiftwidth = 2,                         -- Size of an indent
   sidescrolloff = 8,                      -- Columns of context
@@ -37,7 +38,6 @@ local options = {
   splitright = true,                      -- Put new windows right of current
   tabstop = 2,                            -- Number of spaces tabs count for
   wildmode = {'list', 'longest'},         -- Command-line completion mode
-  wrap = false,                           -- Disable line wrap
 }
 
 -- Set each option
@@ -418,3 +418,4 @@ Short explanation of each option:		*option-list*
 'writedelay'	  'wd'	    delay this many msec for each char (for debug)
 
 ]]
+
