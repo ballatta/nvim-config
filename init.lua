@@ -1,10 +1,13 @@
 local paq = require('paq')
 
+require('autocmds')
 require('fzy.fzy')
 require('maps')
 require('settings')
 require('statusline')
 require('utils')
+require('bondLint')
+require('bondLsp')
 -- require('cmp')
 
 paq {
@@ -17,6 +20,7 @@ paq {
   "mfussenegger/nvim-fzy";                -- Fzy fuzzy finder (fast!)
   "nvim-orgmode/orgmode";                 -- Org Mode in Nvim
   "folke/which-key.nvim";                 -- Emacs-inspired Which-Key
+  "mfussenegger/nvim-lint";                -- Fzy fuzzy finder (fast!)
   -- "hrsh7th/nvim-cmp";                  -- The completion plugin
   -- "hrsh7th/cmp-buffer";                -- buffer completions
   -- "hrsh7th/cmp-path";                  -- path completions
