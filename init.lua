@@ -19,16 +19,15 @@ paq {
   "neovim/nvim-lspconfig";                -- Language Server Protocol
   "ahmedkhalf/project.nvim";              -- Project management
   "mfussenegger/nvim-fzy";                -- Fzy fuzzy finder (fast!)
-  "nvim-orgmode/orgmode";                 -- Org Mode in Nvim
   "folke/which-key.nvim";                 -- Emacs-inspired Which-Key
-  "mfussenegger/nvim-lint";                -- Fzy fuzzy finder (fast!)
+  "mfussenegger/nvim-lint";
   "tpope/vim-surround";
   "tpope/vim-commentary";
-    "tpope/vim-eunuch";
-    "tpope/vim-repeat";
+  "tpope/vim-eunuch";
+  "tpope/vim-repeat";
   "tpope/vim-rsi";
   "mickael-menu/zk-nvim";
-  "nvim-orgmode/orgmode";
+  "nvim-neorg/neorg";
   -- "hrsh7th/nvim-cmp";                  -- The completion plugin
   -- "hrsh7th/cmp-buffer";                -- buffer completions
   -- "hrsh7th/cmp-path";                  -- path completions

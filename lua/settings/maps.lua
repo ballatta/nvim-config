@@ -33,9 +33,9 @@ v = visual
 x = visual-block
 ]]
 
--- After searching, pressing enter again removes lingering highlights
-map("n", "<cr>", ":nohlsearch<cr>", options)
+-- After searching, pressing enter again removes lingering highlights map("n", "<cr>", ":nohlsearch<cr>", options)
 -- Switch between buffers, one-off
+map("n", "<leader>bD", ":bd!<cr>", options)
 map("n", "<leader>bn", ":bnext<cr>", options)
 map("n", "<leader>bp", ":bprev<cr>", options)
 -- Switch between buffers, easy repeat
@@ -47,7 +47,9 @@ map("n", "<leader>j", "<C-w>j", options)
 map("n", "<leader>k", "<C-w>k", options)
 map("n", "<leader>l", "<C-w>l", options)
 -- New terminal window below current (small)
-map("n", "<leader>T", ":sp<CR><C-w>j:term<CR>20<C-W>-i", options)
+map("n", "<leader>T", ":terminal<cr>", options)
+map("n", '<leader>wf', ':split#<cr><C-w>k', options)
+map("n", '<leader>wr', ':vs#<cr><C-w>h', options)
 -- Open netrw file explorer to left (small)
 map("n", "<leader>e", ":Lex 30<cr>", options)
 -- Resize with arrows
@@ -58,6 +60,10 @@ map("n", "<A-Right>", ":vertical resize +2<CR>", options)
 -- Heavenly window movement
 map("n", "<leader>wn", "<C-W><C-W>", options)
 map("n", "<leader>wp", "<C-W>W", options)
+map("n", "<leader>wv", "<C-W>v", options)
+map("n", "<leader>ws", "<C-W>s", options)
+map("n", "<leader>wm", "<C-W>o", options)
+map("n", "<leader>wd", "<C-W>c", options)
 -- Source file
 map("n", "<leader>.", ":w<cr>:luafile %<cr>", options)
 -- Source file and run PaqSync
